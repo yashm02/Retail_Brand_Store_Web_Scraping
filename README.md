@@ -21,19 +21,21 @@ webdriver_manager.chrome: used for managing the Chrome WebDriver.
 requests: used for making HTTP requests and handling responses.
 
 Approach:
-For this assignment, I chose to scrape the store locations of Adidas in India. I used Python along with Selenium, BeautifulSoup, and Geopy libraries to extract the store name, address, timings, coordinates, and phone number from the website. Here are the steps I followed:
 
-Open the website https://www.adidas.co.in/storefinder using Selenium and navigate to the Store Finder page.
-Extract the URLs of all the cities that have Adidas stores in India.
+For this assignment, I chose to scrape the store locations of Titan in India. I used Python along with Selenium, BeautifulSoup, and Geopy libraries to extract the store name, address, timings, coordinates, and phone number from the website. Here are the steps I followed:
+
+Open the website https://stores.titan.co.in/ using Selenium and navigate to the Advanced Search page.
+Extract the URLs of all the cities that have Titan stores in India.
 Loop through each city URL and extract the store details from each store page.
 Use BeautifulSoup to parse the HTML and extract the necessary information such as store name, address, timings, and phone number.
 Use Geopy to get the latitude and longitude coordinates of the store address.
 Store all the extracted information in a CSV file.
+
 Challenges faced:
 
 Extracting the URLs of all the cities that have Adidas stores in India was a bit tricky as they were nested under multiple div tags. However, I was able to use the find_all() function to locate them.
 The store timings were listed in a table format and sometimes had multiple timings for different days. I had to use the split() function to separate them and store them in a list.
-Getting the coordinates using Geopy was sometimes inaccurate as the address format was not consistent across all store locations. However, I was able to use the Nominatim() function to get the most accurate coordinates possible based on the given address.
+Getting the coordinates using Geopy was sometimes inaccurate as the address format was not consistent across all store locations. However, I was able to use the ArcGIS() function to get the most accurate coordinates possible based on the given address.
 Overall, this was a fun and challenging project that helped me practice my web scraping skills. The final CSV file with all the store details can be found in the GitHub repository link provided above.
 
 
