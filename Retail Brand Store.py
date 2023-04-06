@@ -9,7 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 geolocator=ArcGIS()
 
 options=webdriver.ChromeOptions()
-options.headless=True
+options.add_argument('headless')
 options.add_experimental_option('excludeSwitches',['enable-logging'])
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
 url="https://stores.titan.co.in/titan-world-watch-shop-lajpat-nagar-new-delhi-187114/Home?utm_source=locator&utm_medium=googleplaces"
