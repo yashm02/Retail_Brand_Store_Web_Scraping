@@ -24,11 +24,10 @@ Approach:
 
 For this assignment, I chose to scrape the store locations of Titan in India. I used Python along with Selenium, BeautifulSoup, and Geopy libraries to extract the store name, address, timings, coordinates, and phone number from the website. Here are the steps I followed:
 
-Open the website https://stores.titan.co.in/ using Selenium and navigate to the Advanced Search page.
-Extract the URLs of all the cities that have Titan stores in India.
-Loop through each city URL and extract the store details from each store page.
+Open the website https://stores.titan.co.in/ using Selenium.
+Loop through each page and extract the store details from each store page.
 Use BeautifulSoup to parse the HTML and extract the necessary information such as store name, address, timings, and phone number.
-Use Geopy to get the latitude and longitude coordinates of the store address.
+Use Geopy to get the latitude and longitude coordinates of the store address. If latitude and longitude cannot be found print "Not Found".
 Store all the extracted information in a CSV file.
 
 Challenges faced:
